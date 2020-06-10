@@ -1,0 +1,37 @@
+html, body{
+  height: 100%;
+}
+
+body{
+  background-image: linear-gradient(to bottom, lightblue, green);
+  background-repeat: no-repeat;
+  background-size: auto;
+  font-size: 24px;
+  margin: 0px 10px;
+  text-align: justify;
+}
+
+.curiosidade{
+  background-image: url("imgs/favo-de-mel.png");
+  border: 1px solid gold;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.icone-curiosidade{
+  float: left;
+  margin-right: 20px;
+}
+
+.casta-de-abelha{
+  float:left;
+  margin-right: 10px;
+  border: 1px solid gold;
+  border-radius: 50%;
+}
+
+#logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

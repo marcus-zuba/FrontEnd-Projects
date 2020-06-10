@@ -1,0 +1,70 @@
+#controles ul {
+  list-style-type: none;
+  padding: 0;
+  transform: translateX(-80%);
+}
+
+#controles ul:hover {
+  transform: translateX(0);
+}
+
+/* Exercício 1: Criar uma transição para quando o mouse estiver em cima dos
+ * botões play/stop (para que o elemento se revele lentamente)
+ */
+ #controles ul {
+   transition: all 500ms ease;
+ }
+
+/*
+ * Exercício 2: Você deve implementar uma metáfora visual para cada um dos 4
+ * estados dos animais. Algumas *sugestões*:
+ *   - com-fome: animal piscando (opacidade variando)
+ *   - satisfeito: uma borda verde no animal e o animal fica girando de alegria
+ *   - com-raiva: animal fica pulsando
+ *   - atacando: animal dá um salto e cresce, com uma borda vermelha
+ */
+.com-fome {
+  animation: piscando .5s ease 0s infinite alternate;
+}
+
+@keyframes piscando {
+  from{ opacity: 1.0;}
+  to{ opacity: 0.3; }
+}
+
+.satisfeito {
+  border: 5px solid green;
+  animation: girando 10s linear 0s infinite normal;
+}
+
+@keyframes girando {
+  from{ transform: rotate(0deg);}
+  to{ transform: rotate(3600deg);}
+}
+
+.com-raiva {
+  border: 3px solid #c76161;
+  animation: pulsando 1s ease 0s infinite alternate;
+}
+
+@keyframes pulsando {
+  from{ transform: scale(1);}
+  to{ transform: scale(1.1);}
+}
+
+.atacando {
+    position: relative;
+    border: 5px solid red;
+    animation: pulando .5s ease-in 0s infinite alternate,
+               atacando .5s ease-in 0s infinite alternate;
+}
+
+@keyframes atacando {
+  from{ transform: scale(1);}
+  to{  transform: scale(1.5);}
+}
+
+@keyframes pulando {
+  from{top: 0px;}
+  to{top: -15px;}
+}
